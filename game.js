@@ -79,7 +79,7 @@ const config = {
 	type: Phaser.AUTO,
 	width: 900,
 	height: 500,
-	backgroundColor: "ffffff",
+	backgroundColor: "000000",
 	physics: {
 		default: 'arcade',
 		arcade: {
