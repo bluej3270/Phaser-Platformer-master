@@ -16,8 +16,8 @@ function create() {
 
   const platforms = this.physics.add.staticGroup();	platforms.create(200, 200, 'platform').setScale(.15, .1).refreshBody();
 
-  	platforms.create(225, 500, 'platform').setScale(3, .3).refreshBody();	
-  	platforms.create(200, 200, 'platform').setScale(.15, .1).refreshBody();
+  platforms.create(225, 500, 'platform').setScale(3, .3).refreshBody();	platforms.create(200, 200, 'platform').setScale(.15, .1).refreshBody();
+
 	platforms.create(100, 400, 'platform').setScale(.5, .1).refreshBody();
 	platforms.create(300, 300, 'platform').setScale(.5, .1).refreshBody();
 	platforms.create(500, 200, 'platform').setScale(.25, .1).refreshBody();
@@ -25,8 +25,8 @@ function create() {
 	platforms.create(100, 100, 'platform').setScale(.15, .1).refreshBody();
 	platforms.create(200, 200, 'platform').setScale(.15, .1).refreshBody();
 	platforms.create(880, 500, 'platform').setScale(.05, .5).refreshBody();
+
 	platforms.create(20, 500, 'platform').setScale(.05, .5).refreshBody();
-	
 	gameState.baddie = this.physics.add.sprite(500, 50, 'bug1');
 	this.physics.add.collider(gameState.baddie, platforms);
 	this.physics.add.collider(gameState.baddie, gameState.player, function () {
@@ -34,11 +34,11 @@ function create() {
 		document.getElementById('txt').innerHTML = 'Oops, Reolad to Restart.';
 	})
 
-	gameState.starOne = this.physics.add.sprite(100, 50, 'star').setScale(.05);
+	gameState.starOne = this.physics.add.sprite(100, 50, 'star').setScale(.15);
 	this.physics.add.collider(gameState.starOne, gameState.player);
 	this.physics.add.collider(gameState.starOne, platforms);
 
-	gameState.starTwo = this.physics.add.sprite(800, 50, 'star').setScale(.05);
+	gameState.starTwo = this.physics.add.sprite(800, 50, 'star').setScale(.15);
 	this.physics.add.collider(gameState.starTwo, gameState.player);
 	this.physics.add.collider(gameState.starTwo, platforms);
 
